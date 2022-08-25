@@ -8,5 +8,3 @@ def main():
     sum = add(a, b)
     print("{} + {} = {}".format(a, b, sum))
 
-
-main()
