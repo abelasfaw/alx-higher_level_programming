@@ -10,8 +10,6 @@ def list_division(my_list_1, my_list_2, list_length):
             div_result = num1 / num2
         except IndexError:
             print("out of range")
-        except ValueError:
-            print("wrong type")
         except ZeroDivisionError:
             print("division by zero")
         except BaseException:
@@ -22,10 +20,10 @@ def list_division(my_list_1, my_list_2, list_length):
             index += 1
     return result
 
-
 def convert_to_int_or_float(input_str):
     if (isinstance(input_str, int)):
         return int(input_str)
     elif (isinstance(input_str, float)):
         return float(input_str)
-    raise ValueError
+    else:
+        raise ValueError
