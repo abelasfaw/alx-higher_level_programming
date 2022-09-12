@@ -14,6 +14,8 @@ def list_division(my_list_1, my_list_2, list_length):
             print("wrong type")
         except ZeroDivisionError:
             print("division by zero")
+        except BaseException:
+            print("wrong type")
         finally:
             result.append(div_result)
             div_result = 0
