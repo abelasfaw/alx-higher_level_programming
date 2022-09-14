@@ -4,6 +4,8 @@ import sys
 
 def safe_function(fct, *args):
     try:
+        if(len(args) == 0):
+            arg1 = arg2 = None
         if(len(args) == 1):
             arg1 = args[0]
             arg2 = None
