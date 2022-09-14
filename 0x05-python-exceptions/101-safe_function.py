@@ -10,7 +10,7 @@ def safe_function(fct, *args):
         elif(len(args) == 2):
             arg1 = args[0]
             arg2 = args[1]
-        return (fct(arg1, argh2))
+        return (fct(arg1, arg2))
     except BaseException as err:
         sys.stderr.write("Exception: {}\n".format(err))
         return None
