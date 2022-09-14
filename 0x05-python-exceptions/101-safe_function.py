@@ -4,7 +4,13 @@ import sys
 
 def safe_function(fct, *args):
     try:
-        return (fct(args[0], args[1]))
+        if(len(args) == 1):
+            arg1 = args[0]
+            arg2 = None
+        elif(len(args) == 2):
+            arg1 = args[0]
+            arg2 = args[1]
+        return (fct(arg1, argh2))
     except BaseException as err:
         sys.stderr.write("Exception: {}\n".format(err))
         return None
