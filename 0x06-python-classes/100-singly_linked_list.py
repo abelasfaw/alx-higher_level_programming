@@ -62,8 +62,8 @@ class SinglyLinkedList:
             return
 
     def __str__(self):
+        result = ""
         if(self.__head is not None):
-            result = ""
             current = self.__head
             while(current is not None):
                 result += str(current.data)
