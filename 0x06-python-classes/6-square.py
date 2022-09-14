@@ -6,8 +6,8 @@ class Square:
     """Square class with size property, area calculating method
     ,setter and getter"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -26,7 +26,7 @@ class Square:
         return self.__position
 
     @position.setter
-    def positon(self, value):
+    def position(self, value):
         if(not(isinstance(value, tuple))):
             raise TypeError("position must be a tuple of 2 positive integers")
         if(len(value) != 2):
