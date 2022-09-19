@@ -3,4 +3,5 @@
 
 
 class Rectangle:
+    """empty rectangle class"""h
     pass
