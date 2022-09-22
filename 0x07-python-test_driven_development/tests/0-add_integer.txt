@@ -16,3 +16,10 @@ TypeError: b must be an integer
 <class 'int'> 
 >>> add_integer(1.2, 2.4)
 3
+>>> add_integer(float("NaN"), 2)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+>>> import sys
+>>> add_integer(sys.float_info.max * 10, 1)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
