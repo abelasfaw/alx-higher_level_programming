@@ -1,0 +1,6 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer("a", 2) # doctest: +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+TypeError: b must be an integer
