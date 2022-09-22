@@ -12,5 +12,7 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add_integer("1.245") #doctest: +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 TypeError: b must be an integer
->>> type(add_integer(1, 2)) #doctest: +NORMALIZE_WHITESPACE
+>>> type(add_integer(1.2, 2.3)) #doctest: +NORMALIZE_WHITESPACE
 <class 'int'> 
+>>> add_integer(1.2, 2.4)
+3
