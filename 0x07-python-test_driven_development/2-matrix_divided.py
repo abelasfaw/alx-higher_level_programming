@@ -7,16 +7,16 @@ def matrix_divided(matrix, div):
             new matrix of results"""
 
     if(not(isinstance(matrix, list))):
-        raise TypeError("matrix must be a matrix (list of lists) of\
-                integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) of integers/f\
+                loats")
     for element in matrix:
         if(not(isinstance(element, list))):
-            raise TypeError("matrix must be a matrix (list of lists)\
-                    of integers/floats")
+            raise TypeError("matrix must be a matrix (list of lists)of integer\
+                    s/floats")
         for data in element:
             if(not(isinstance(data, int)) and not(isinstance(data, float))):
-                raise TypeError("matrix must be a matrix\
-                        (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix(list of lists) of int\
+                        egers/floats")
     row_size = len(matrix[0])
     for i in range(1, len(matrix)):
         if(len(matrix[1]) != row_size):
