@@ -15,8 +15,7 @@ def matrix_divided(matrix, div):
                     s/floats")
         for data in element:
             if(not(isinstance(data, int)) and not(isinstance(data, float))):
-                raise TypeError("matrix must be a matrix(list of lists) of int\
-                        egers/floats")
+                raise TypeError("matrix must be a matrix(list of lists) of integers/floats")
     row_size = len(matrix[0])
     for i in range(1, len(matrix)):
         if(len(matrix[1]) != row_size):
