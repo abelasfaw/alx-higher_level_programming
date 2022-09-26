@@ -2,8 +2,7 @@
 """Base module for geometry type"""
 
 
-"""empty BaseGeometry class"""
-
-
 class BaseGeometry:
+    """empty BaseGeometry class"""
+
     pass
