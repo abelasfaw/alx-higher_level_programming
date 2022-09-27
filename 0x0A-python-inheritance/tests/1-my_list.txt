@@ -8,6 +8,8 @@ True
 True
 >>> len(lis) == 0
 True
+>>> lis.print_sorted()
+[]
 >>> lis.append(1)
 >>> lis.append(-1)
 >>> lis.append(0)
@@ -17,3 +19,6 @@ True
 [1, -1, 0]
 >>> lis.print_sorted()
 [-1, 0, 1]
+>>> lis.print_sorted() != lis
+[-1, 0, 1]
+True
