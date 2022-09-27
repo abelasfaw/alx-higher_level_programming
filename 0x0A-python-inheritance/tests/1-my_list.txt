@@ -1,0 +1,19 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> lis = MyList()
+>>> isinstance(lis, MyList)
+True
+>>> isinstance(lis, list)
+True
+>>> issubclass(list, list)
+True
+>>> len(lis) == 0
+True
+>>> lis.append(1)
+>>> lis.append(-1)
+>>> lis.append(0)
+>>> len(lis) == 3
+True
+>>> print(lis)
+[1, -1, 0]
+>>> lis.print_sorted()
+[-1, 0, 1]
