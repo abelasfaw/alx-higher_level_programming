@@ -10,5 +10,7 @@
 def read_file(filename=""):
     """read a text file and prints to stdout"""
 
-    with open(filename, encoding="utf-8") as f:
-        print(f.read())
+    if(filename is not None):
+        with open(filename, encoding="utf-8") as f:
+            for line in f:
+                print(line, end='')
