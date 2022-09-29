@@ -41,4 +41,7 @@ class Student:
         if(len(json)):
             for key in json:
                 self.key = json[key]
+        else:
+            for key in self.__dict__:
+                self.key = None
         self.__dict__ = json
