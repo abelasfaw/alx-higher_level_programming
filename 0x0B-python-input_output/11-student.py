@@ -43,5 +43,5 @@ class Student:
                 self.key = json[key]
         else:
             for key in self.__dict__:
-                self.key = None
+                delattr(self, self.__dict__[key])
         self.__dict__ = json
