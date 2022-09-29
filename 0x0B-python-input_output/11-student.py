@@ -41,7 +41,7 @@ class Student:
         if(len(json)):
             for key in json:
                 self.key = json[key]
+            self.__dict__ = json
         else:
             for key in self.__dict__:
                 delattr(self, self.__dict__[key])
-        self.__dict__ = json
