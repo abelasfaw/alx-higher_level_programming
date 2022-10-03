@@ -13,19 +13,23 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """string representation of instance"""
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.height)
 
     @property
     def size(self):
+        """returns size of square"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """sets width and height to given value"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """updates values of attributes"""
         if(args is not None and len(args) != 0):
             index = 0
             for arg in args:
