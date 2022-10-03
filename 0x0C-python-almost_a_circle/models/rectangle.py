@@ -124,4 +124,10 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dictionary represntation of instance"""
-        return self.__dict__
+        keys = ["id", "width", "height", "x", "y"]
+        index = 0
+        result = dict()
+        for key, value in self.__dict__.items():
+            result[keys[index]] = value
+            index += 1
+        return result
