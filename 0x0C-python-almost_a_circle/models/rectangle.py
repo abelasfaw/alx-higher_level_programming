@@ -84,3 +84,8 @@ class Rectangle(Base):
                 print("#", end='')
             if(i != self.__height):
                 print()
+
+    def __str__(self):
+        """string representation of instance"""
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
