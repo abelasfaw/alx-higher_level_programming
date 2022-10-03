@@ -121,3 +121,7 @@ class Rectangle(Base):
                 self.y = kwargs["y"]
             if("id" in kwargs):
                 self.id = kwargs["id"]
+
+    def to_dictionary(self):
+        """dictionary represntation of instance"""
+        return self.__dict__
