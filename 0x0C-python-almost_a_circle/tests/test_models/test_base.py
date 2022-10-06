@@ -12,3 +12,8 @@ class TestBase(unittest.TestCase):
     def test_auto_id(self):
         """checks if id is auto generated"""
         self.assertEqual(1, Base().id)
+
+    def test_id_increment(self):
+        """checkis if id is incremented from previous value"""
+        prev = Base().id
+        self.assertEqual((prev + 1), Base().id)
