@@ -59,6 +59,6 @@ class Base:
         if(cls.__name__ == "Rectangle"):
             new_instance = cls(1, 1, 0, 0)
         else:
-            new_instance = cls(1, 1, 0)
+            new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
