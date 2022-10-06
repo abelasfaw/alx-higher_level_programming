@@ -38,7 +38,6 @@ class Base:
                 file.write(str(dicts))
             return
         for obj in list_objs:
-            print(obj.to_dictionary())
             dicts.append(obj.to_dictionary())
         filename = str(cls.__name__) + ".json"
         js = Base.to_json_string(dicts)
