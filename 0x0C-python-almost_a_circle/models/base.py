@@ -4,6 +4,7 @@ by other modules in these package"""
 
 
 import json
+from os import path
 
 
 class Base:
@@ -62,3 +63,17 @@ class Base:
             new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """reutrns list of instances from json file"""
+        results = []
+        filename = str(cls.__name__) + ".json"
+        if(path.exists(filename)):
+            with open(filename, 'r', encoding='utf-8') as file:
+                obj_list = cls.from_json_string(file.read())
+                for element in obj_list:
+                    results.append(cls.create(**element))
+            return results
+        else:
+            return results
