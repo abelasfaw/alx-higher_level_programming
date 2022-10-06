@@ -52,3 +52,10 @@ class Base:
             return result
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns a new instance with provided attribute values"""
+        new_instance = cls(1, 1, 0, 0)
+        new_instance.update(**dictionary)
+        return new_instance
