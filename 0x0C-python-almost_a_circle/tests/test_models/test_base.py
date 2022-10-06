@@ -37,3 +37,19 @@ class TestBase(unittest.TestCase):
     def test_to_json_string_valid_input_type(self):
         """validates type of output with expected input"""
         self.assertEqual(type("str"), type(Base().to_json_string([{'id': 1}])))
+
+    def test_from_json_string_none(self):
+        """check that return is empty list with None input"""
+        self.assertEqual([], Base().from_json_string(None))
+
+    def test_from_json_string_empty_list(self):
+        """check that return is empty list with empty input"""
+        self.assertEqual([], Base().from_json_string("[]"))
+
+    def test_from_json_string_valid_input(self):
+        """validate output for expected input"""
+        self.assertEqual([{'id': 1}], Base.from_json_string('[{"id": 1}]'))
+
+    def test_from_json_string_valid_input_type(self):
+        """validate output type for expected input"""
+        self.assertEqual(type([]), type(Base.from_json_string('[{"id": 1}]')))
