@@ -43,3 +43,12 @@ class Base:
         js = Base.to_json_string(dicts)
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(js)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """reutrns list of json string representation"""
+        result = []
+        if(json_string is None or len(json_string) == 0):
+            return result
+        else:
+            return json.loads(json_string)
