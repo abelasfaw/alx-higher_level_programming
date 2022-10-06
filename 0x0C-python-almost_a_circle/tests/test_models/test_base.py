@@ -20,7 +20,7 @@ class TestBase(unittest.TestCase):
 
     def test_id_save(self):
         """checks if generated id is saved"""
-        self.assertEqual(Base().id, Base._nb_objects)
+        self.assertEqual(1, Base(1).id)
 
     def test_to_json_string_none(self):
         """validates output with None input"""
