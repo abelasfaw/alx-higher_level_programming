@@ -36,5 +36,6 @@ class Base:
             print(obj.to_dictionary())
             dicts.append(obj.to_dictionary())
         filename = str(cls.__name__) + ".json"
-        with open(filename, 'w') as file:
-            json.dump(Base.to_json_string(dicts), file)
+        js = Base.to_json_string(dicts)
+        with open(filename, 'w', encoding='utf-8') as file:
+            file.write(js)
