@@ -56,6 +56,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns a new instance with provided attribute values"""
-        new_instance = cls(1, 1, 0, 0)
+        if(cls.__name__ == "Rectangle"):
+            new_instance = cls(1, 1, 0, 0)
+        else:
+            new_instance = cls(1, 1, 0)
         new_instance.update(**dictionary)
         return new_instance
