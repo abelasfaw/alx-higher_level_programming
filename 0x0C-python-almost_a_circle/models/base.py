@@ -27,3 +27,14 @@ class Base:
         if(list_dictionaries is None or len(list_dictionaries) == 0):
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes json representation of input to file"""
+        dicts = []
+        for obj in list_objs:
+            print(obj.to_dictionary())
+            dicts.append(obj.to_dictionary())
+        filename = str(cls.__name__) + ".json"
+        with open(filename, 'w') as file:
+            json.dump(Base.to_json_string(dicts), file)
