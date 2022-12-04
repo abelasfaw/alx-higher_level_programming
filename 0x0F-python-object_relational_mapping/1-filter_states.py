@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-''' lists all states  with a name starting with N (upper N)
-from the database hbtn_0e_0_usa where results are sorted by
-state id'''
+''' lists all states  with a name starting with N (upper N)'''
 
 
 import sys
